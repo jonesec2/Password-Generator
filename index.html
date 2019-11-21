@@ -9,28 +9,49 @@
     <link rel="stylesheet" href="assets/style.css">
 </head>
 
-<body style="background-image: url('assets/papyrus-dark.png');">
-        <div class="container  mt-5 px-3 py-3" style="background-color: rgb(41, 39, 39);">
-            <input class="btn btn-primary btn-block dropdown-toggle" type="button" value="Let's make a password">
-            <!-- <div class="btn-group" role="group" aria-label="Button group with nested dropdown">
-                <button type="button" class="btn btn-secondary">1</button>
-                <button type="button" class="btn btn-secondary">2</button>
-
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-secondary dropdown-toggle"
-                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Dropdown
-                    </button>
-                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
-                        <input class="dropdown-item" href="#">Dropdown link</a>
-                        <input class="dropdown-item" href="#">Dropdown link</a>
+<body style="background-image: url('assets/what-the-hex-dark.png');">
+    <div class="container dem rounded">
+        <!-- <div class="row"> -->
+        <div class="container-fluid width px-3 py-3 rounded" style="background-image: url('assets/what-the-hex.png');">
+            <input type="button" id="buttonOne" value="Let's make a password"
+                class="btn mx-auto btn-primary btn-block content-toggle" onclick="this.blur(); changeButton();"
+                style="background-color:transparent">
+            <!-- Let's make a password</button> -->
+            <div class="container dropdownContent rounded">
+                <div class="row ">
+                    <div class="col-12-md mt-2 text-center mx-auto">
+                        <p>Test</p>
                     </div>
                 </div>
-            </div> -->
+                <div class="row">
+                    <div class="col-12-md text-center mx-auto">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Middle</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12-md my-2 text-center mx-auto">
+                        <div class="btn-group" role="group" aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary">Left</button>
+                            <button type="button" class="btn btn-secondary">Middle</button>
+                            <button type="button" class="btn btn-secondary">Right</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12-md mb-2 text-center mx-auto">
+                        <button type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 
 
+    <script src="assets/js.js"></script>
 </body>
 
 </html>
