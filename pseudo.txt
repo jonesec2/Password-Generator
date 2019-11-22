@@ -1,0 +1,25 @@
+-- High Level
+1. Prompt the user to create a password
+    a. User will click button and page will then display options for user to create password
+2. Create slider for # of characters in password, on / off buttons for type of characters, and a submit button.
+3. Clicking submit will create alert that will confirm (proceed or go back)
+    If true then password is created
+    If false then alert goes away and you can continue editing choices
+
+-- Variables and functions
+4. Take user input 
+    A. Character Length
+    B. True / False for variables
+5. Create Arrays for variables
+    A. Array for different types of special characters
+        Create On / Off buttons for user decisions
+        True / False - if / else statements
+6. Confirm User input
+    A. Create Alert (while or for loop?)
+    B. If "Cancel" return to page
+    C. If "Confirm" password is generated
+6. Generate password
+    A. Take array variables selected and pick random characters
+7. Password can be copied to clipboard.
+
+    

@@ -1,3 +1,4 @@
+// Creates collapsable container //
 var coll = document.getElementsByClassName("content-toggle");
 var i;
 
@@ -14,6 +15,7 @@ for (i = 0; i < coll.length; i++) {
   });
 }
 
+// Changes the text of the main "Password" container //
 function changeButton()
 {
     var elem = document.getElementById("buttonOne");
@@ -21,6 +23,7 @@ function changeButton()
     else elem.value = "Configure your settings";
 }
 
-if (dropdownContent.style.display === "block") {
-   button.style.text === "Choose";
-}
+// if (dropdownContent.style.display === "block") {
+//    button.style.text === "Choose";
+// }
+
