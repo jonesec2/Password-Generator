@@ -5,12 +5,12 @@ var i;
 for (i = 0; i < coll.length; i++) {
   coll[i].addEventListener("click", function() {
     this.classList.toggle("active");
-    var dropdownContent = this.nextElementSibling;
-    if (dropdownContent.style.maxHeight) {
-        dropdownContent.style.maxHeight = null;
+    var dropDownContent = this.nextElementSibling;
+    if (dropDownContent.style.maxHeight) {
+        dropDownContent.style.maxHeight = null;
     } 
     else {
-        dropdownContent.style.maxHeight = dropdownContent.scrollHeight + "px";
+        dropDownContent.style.maxHeight = dropDownContent.scrollHeight + "px";
     }
   });
 }

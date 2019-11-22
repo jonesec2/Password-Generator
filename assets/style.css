@@ -43,7 +43,7 @@ p {
     margin-top: 10%;
 }
 
-.dropdownContent {
+.dropDownContent {
     padding: 0 18px;
     overflow: hidden;
     background-color: rgb(36, 36, 36);
@@ -51,13 +51,13 @@ p {
     transition: max-height 0.2s ease-out;
 }
 
-.slidecontainer {
-    width: 100%; /* Width of the outside container */
+.slideContainer {
+    width: 100%; 
   }
   
   /* The slider itself */
   .slider {
-    -webkit-appearance: none;  /* Override default CSS styles */
+    -webkit-appearance: none;  
     appearance: none;
     width: 100%; /* Full-width */
     border-radius: 5px;
