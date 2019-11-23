@@ -10,14 +10,22 @@
 </head>
 
 <body style="background-image: url('assets/what-the-hex-dark.png');">
-    <div class="container dem rounded">
-        <!-- <div class="row"> -->
+    
+    <!-- Container holding everything -->
+    <div class="container  py-1 px-2 dem rounded">
+        
+        <!-- Container holding Header button -->
         <div class="container-fluid width px-3 py-3 rounded" style="background-image: url('assets/what-the-hex.png');">
+            
+            <!-- Header button that changes and shows hidden container -->
             <input type="button" id="buttonOne" value="Let's make a password"
-                class="btn mx-auto btn-primary btn-block contentToggle" onclick="changeButton(); this.blur();"
-                style="background-color:transparent;">
-            <!-- Let's make a password</button> -->
-            <div class="container dropDownContent rounded">
+                class="btn mx-auto buttonOne2 btn-primary btn-block contentToggle"
+                onclick="changeButton(); this.blur();" style="background-color:transparent;">
+                
+                <!-- The hidden content container -->
+                <div class="container dropDownContent rounded">
+                
+                    <!-- The slider -->
                 <div class="row ">
                     <div class="col-12-md mt-2 text-center mx-auto">
                         <p>Choose character length: 8 to 128</p>
@@ -27,40 +35,51 @@
                         <span id="f" style="font-weight:bold;color:rgb(212, 203, 203)">45</span>
                     </div>
                 </div>
+                <!-- Description of options -->
                 <div class="row">
                     <div class="col-12-md col-4-sm text-center mx-auto">
                         <p>Choose what type of characters will be in your password</p>
                     </div>
                 </div>
+
+                <!-- Option buttons -->
                 <div class="row">
-                    <div class="col-12-md col-4-sm text-center mx-auto">
-                        <div class="btn-group" role="group" aria-label="Basic example">
+                    <div class="btn-group  text-center mx-auto" role="group" aria-label="">
+                        <div class="col-4-md col-12-sm text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onUpper">
                                 <span class="onOff Up round"></span>
                             </label>
+                        </div>
+                        <div class="col-4-md col-12-sm text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onLower">
                                 <span class="onOff Low round"></span>
                             </label>
+                        </div>
+                        <div class="col-4-md col-12-sm text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onNumber">
-                                <span class="onOff Num round" ></span>
+                                <span class="onOff Num round"></span>
                             </label>
+                        </div>
+                        <div class="col-4-md col-12-sm text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onSpecial">
-                                <span class="onOff Spe round" ></span>
+                                <span class="onOff Spe round"></span>
                             </label>
                         </div>
                     </div>
                 </div>
-                <div class="row">
-                </div>
+
+                <!-- Submit Button -->
                 <div class="row">
                     <div class="col-12-md mb-2 text-center mx-auto">
                         <button onclick="generatePassword()" type="button" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
+
+                <!-- Password form -->
                 <div class="row">
                     <div class="container mb-2 pb-1 text-center" id="displayPassword">
                         <textarea rows="3" cols="80" type="text" id="passwordComplete"></textarea>
