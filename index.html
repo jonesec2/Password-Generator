@@ -14,50 +14,61 @@
         <!-- <div class="row"> -->
         <div class="container-fluid width px-3 py-3 rounded" style="background-image: url('assets/what-the-hex.png');">
             <input type="button" id="buttonOne" value="Let's make a password"
-                class="btn mx-auto btn-primary btn-block content-toggle" onclick="this.blur(); changeButton();"
-                style="background-color:transparent">
+                class="btn mx-auto btn-primary btn-block contentToggle" onclick="changeButton(); this.blur();"
+                style="background-color:transparent;">
             <!-- Let's make a password</button> -->
             <div class="container dropDownContent rounded">
                 <div class="row ">
-                    <div class="col-6-md mt-2 text-center mx-auto">
+                    <div class="col-12-md mt-2 text-center mx-auto">
                         <p>Choose character length: 8 to 128</p>
                         <div class="slideContainer">
                             <input type="range" min="8" max="128" value="68" class="slider" id="slider">
                         </div>
                         <span id="f" style="font-weight:bold;color:rgb(212, 203, 203)">45</span>
                     </div>
-                    <div class="col-6-md mt-2 text-center mx-auto">
-
+                </div>
+                <div class="row">
+                    <div class="col-12-md col-4-sm text-center mx-auto">
+                        <p>Choose what type of characters will be in your password</p>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12-md text-center mx-auto">
+                    <div class="col-12-md col-4-sm text-center mx-auto">
                         <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">Left</button>
-                            <button type="button" class="btn btn-secondary">Middle</button>
-                            <button type="button" class="btn btn-secondary">Right</button>
+                            <label class="switch">
+                                <input type="checkbox" id="onUpper">
+                                <span class="onOff Up round" onclick="getUpper()"></span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" id="onLower">
+                                <span class="onOff Low round" onclick="getLower()"></span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" id="onNumber">
+                                <span class="onOff Num round" onclick="getNumber()"></span>
+                            </label>
+                            <label class="switch">
+                                <input type="checkbox" id="onSpecial">
+                                <span class="onOff Spe round" onclick="getSpecial()"></span>
+                            </label>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-12-md my-2 text-center mx-auto">
-                        <div class="btn-group" role="group" aria-label="Basic example">
-                            <button type="button" class="btn btn-secondary">Left</button>
-                            <button type="button" class="btn btn-secondary">Middle</button>
-                            <button type="button" class="btn btn-secondary">Right</button>
-                        </div>
-                    </div>
                 </div>
                 <div class="row">
                     <div class="col-12-md mb-2 text-center mx-auto">
-                        <button type="button" class="btn btn-primary">Submit</button>
+                        <button onclick="generatePassword()" type="button" class="btn btn-primary">Submit</button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="container mb-2 pb-1 text-center" id="displayPassword">
+                        <textarea rows="3" cols="80" type="text" id="passwordComplete"></textarea>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
-
     <script src="assets/js.js"></script>
 </body>
 

@@ -2,6 +2,20 @@
     max-width: 768px;
     
 }
+body {
+    white-space: normal;
+}
+
+#buttonOne {
+    font-size: 35PX;
+    width: 100%;
+    border: 3px, black;
+    outline: 3px, BLACK;
+    text-shadow:  -1px 0 #000,
+    1px -1px 0 #000,
+    -1px 1px 0 #000,
+    1px 1px 0 #000;
+}
 
 .btn:hover { outline: 0 !important }
 
@@ -16,12 +30,8 @@
     max-width: 400px;
     font-size: 25px;
     font-weight: 500;
-    border: none;
-    outline: none;
-    text-shadow:  -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
+    border: black;
+    outline: BLACK;
 }
 #buttonOne {
     color: white;
@@ -55,17 +65,17 @@ p {
     width: 100%; 
   }
   
-  /* The slider itself */
+  /* The slider  */
   .slider {
     -webkit-appearance: none;  
     appearance: none;
-    width: 100%; /* Full-width */
+    width: 100%; 
     border-radius: 5px;
-    height: 15px; /* Specified height */
-    background: #d3d3d3; /* Grey background */
-    outline: none; /* Remove outline */
-    opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
-    -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+    height: 15px;
+    background: #d3d3d3; 
+    outline: none; 
+    opacity: 0.7; 
+    -webkit-transition: .2s; 
     transition: opacity .2s;
   }
   
@@ -74,24 +84,34 @@ p {
     opacity: 1; /* Fully shown on mouse-over */
   }
   
-  /* The slider handle (use -webkit- (Chrome, Opera, Safari, Edge) and -moz- (Firefox) to override default look) */
+  /* The slider handle */
   .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; /* Override default look */
+    -webkit-appearance: none; 
     appearance: none;
-    width: 25px; /* Set a specific slider handle width */
-    height: 20px; /* Slider handle height */
+    width: 22px; 
+    height: 22px; 
     border-radius: 50%;
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    background: #2196F3; 
+    cursor: pointer; 
   }
   
   .slider::-moz-range-thumb {
-    width: 25px; /* Set a specific slider handle width */
-    height: 25px; /* Slider handle height */
+    width: 22px; 
+    height: 22px; 
     border-radius: 50%;
-    background: #4CAF50; /* Green background */
-    cursor: pointer; /* Cursor on hover */
+    background: #2196F3; 
+    cursor: pointer; 
   }
+
+p {
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  hyphens: auto;
+}
+
+@media (max-width: 258px) {
+    input {font-size: 18px;}
+}
 
 @media (max-width: 258px) {
     .container-fluid {font-size: 16px;}
@@ -100,3 +120,103 @@ p {
 @media (max-width: 400px) {
     .btn-block {font-size: 20px;}
 }
+
+/* The switch - the box around the slider */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 80px;
+    height: 34px;
+  }
+  
+  /* Hide default HTML checkbox */
+  .switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  /* The slider */
+  .onOff {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 5px;
+    right: 5px;
+    bottom: 10px;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 34px;
+  }
+  
+  .Up:before {
+    position: absolute;
+    content: "ABC";
+    height: 28px;
+    width: 32px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+
+  .Low:before {
+    position: absolute;
+    content: "abc";
+    height: 28px;
+    width: 32px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .Num:before {
+    position: absolute;
+    content: "123";
+    height: 28px;
+    width: 32px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  .Spe:before {
+    position: absolute;
+    content: "!*$";
+    height: 28px;
+    width: 32px;
+    left: 4px;
+    bottom: 2px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+    border-radius: 50%;
+  }
+  
+  
+  input:checked + .onOff {
+    background-color: #2196F3;
+  }
+  
+  input:focus + .onOff {
+    box-shadow: 0 0 1px #2196F3;
+  }
+  
+  input:checked + .onOff:before {
+    -webkit-transform: translateX(30px);
+    -ms-transform: translateX(30px);
+    transform: translateX(30px);
+  }
+
+#passwordComplete {
+      width: 100%;
+  }
