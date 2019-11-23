@@ -110,7 +110,7 @@ p {
 }
 
 @media (max-width: 258px) {
-    input {font-size: 18px;}
+    #buttonOne {font-size: 18px;}
 }
 
 @media (max-width: 258px) {

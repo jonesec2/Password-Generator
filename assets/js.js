@@ -22,7 +22,7 @@ function changeButton() {
   else elem.value = "Configure your settings";
 }
 
-// Slider
+// Sliders
 var slider = document.getElementById("slider");
 var output = document.getElementById("f");
 output.innerHTML = slider.value; // Display the default slider value
@@ -32,46 +32,7 @@ slider.oninput = function () {
   output.innerHTML = this.value;
 }
 
-function getUpper() {
-  var isChecked = document.getElementById("onUpper").checked;
-
-  if (isChecked === false) {
-    ;
-  } else {
-    var upperCase;
-  }
-}
-
-function getLower() {
-  var isChecked = document.getElementById("onLower").checked;
-
-  if (isChecked === false) {
-    ;
-  } else {
-    var lowerCase;
-  }
-}
-
-function getNumber() {
-  var isChecked = document.getElementById("onNumber").checked;
-
-  if (isChecked === false) {
-    ;
-  } else {
-    var numberCase;
-  }
-}
-
-function getSpecial() {
-  var isChecked = document.getElementById("onSpecial").checked;
-
-  if (isChecked === false) {
-    ;
-  } else {
-    var specialCase;
-  }
-}
-
+//declare character arrays
 var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 var lowerCase = "abcdefghijklmnopqrstuvwxyz";
 var specialCase = "!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
@@ -79,86 +40,34 @@ var numberCase = "0123456789";
 
 // password logic
 function generatePassword() {
-
-  var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-  var lowerCase = "abcdefghijklmnopqrstuvwxyz";
-  var specialCase = "!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~";
-  var numberCase = "0123456789";
-
-
+  // create global variable for variables to concatenate
+  var characters = ""
+  //checks value of slider for character length
   let length = document.getElementById("slider").value;
 
-  function getUpper() {
-    var isChecked = document.getElementById("onUpper").checked;
-
-    if (isChecked === false) {
-      ;
-    } else {
-      var upperCase;
-    }
+  // checks if sliders are checked
+  if (document.getElementById("onUpper").checked) {
+    characters = characters + upperCase;
   }
-
-  function getLower() {
-    var isChecked = document.getElementById("onLower").checked;
-
-    if (isChecked === false) {
-      ;
-    } else {
-      var lowerCase;
-    }
+  if (document.getElementById("onLower").checked) {
+    characters = characters + lowerCase;
   }
-
-  function getNumber() {
-    var isChecked = document.getElementById("onNumber").checked;
-
-    if (isChecked === false) {
-      ;
-    } else {
-      var numberCase;
-    }
+  if (document.getElementById("onSpecial").checked) {
+    characters = characters + specialCase;
   }
-
-  function getSpecial() {
-    var isChecked = document.getElementById("onSpecial").checked;
-
-    if (isChecked === false) {
-      ;
-    } else {
-      var specialCase;
-    }
+  if (document.getElementById("onNumber").checked) {
+    characters = characters + numberCase;
   }
-
-  if (getUpper() !== true && getLower() !== true && getNumber() !== true && getSpecial() !== true) {
-    var characters = (upperCase + lowerCase + specialCase + numberCase);
+  // checks if no sliders are checked and alerts
+  if (characters.length === 0) {
+    alert("Pick something please");
+    //must return value if none are checked
+    return;
   }
-  // else if (getLower() !== false && getNumber() !== false && getSpecial() !== false) {
-  //   var characters = "!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz0123456789";
-  // }
-  //  else if (getUpper() !== false  && getNumber() !== false && getSpecial() !== false) {
-  //   var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~0123456789";
-  // }
-  // else if (getUpper() !== false && getLower() !== false  && getSpecial() !== false) {
-  //   var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz";
-  // }
-  // else if (getSpecial() !== false && getLower() !== false) {
-  //   var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz0123456789";
-  // }
-  // else if (getSpecial() !== false && getLower() !== false) {
-  //   var characters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ!\#$%&'()*+,-./:;<=>?@[\]^_`{|}~abcdefghijklmnopqrstuvwxyz0123456789";
-  // }
-  else {
-    var characters = "please pick one"
-  }
-
   let password = ""
-
   for (var i = 0; i < length; i++) {
     password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length - 1)));
   }
   // add password to page
   document.getElementById("passwordComplete").value = password;
 }
-
-
-
-
