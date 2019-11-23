@@ -71,3 +71,15 @@ function generatePassword() {
   // add password to page
   document.getElementById("passwordComplete").value = password;
 }
+
+// copy to clipboard
+function copyClipboard() {
+  var copyText = document.getElementById("passwordComplete");
+
+  copyText.select();
+  copyText.setSelectionRange(0, 99999);
+
+  document.execCommand("copy");
+
+  alert("Copied the text: " + copyText.value);
+}

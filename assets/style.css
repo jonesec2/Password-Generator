@@ -4,6 +4,7 @@
 }
 body {
     white-space: normal;
+    text-align: center;
 }
 
 #buttonOne {
@@ -15,6 +16,8 @@ body {
     1px -1px 0 #000,
     -1px 1px 0 #000,
     1px 1px 0 #000;
+    /* overflow: auto; */
+    overflow-wrap: normal;
 }
 
 .btn:hover { outline: 0 !important }
@@ -44,6 +47,7 @@ body {
 }
 p {
     color: white;
+    text-align: center;
 }
 .dem {
     max-width:800px;
@@ -114,8 +118,13 @@ p {
 
 }
 
+@media (max-width: 540px) {
+    #clipBoard {font-size: 10px;  overflow-wrap: break-word;}
+
+}
+
 @media (max-width: 400px) {
-    .btn-group {overflow-wrap: normal ;}
+    .btn-group {overflow: auto; width: 100%;}
 }
 
 /* The switch - the box around the slider */
@@ -124,6 +133,7 @@ p {
     display: inline-block;
     width: 80px;
     height: 34px;
+    overflow-wrap: normal;
   }
   
   /* Hide default HTML checkbox */
@@ -131,6 +141,7 @@ p {
     opacity: 0;
     width: 0;
     height: 0;
+    overflow-wrap: normal;
   }
   
   /* The slider */

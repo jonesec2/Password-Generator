@@ -12,7 +12,7 @@
 <body style="background-image: url('assets/what-the-hex-dark.png');">
     
     <!-- Container holding everything -->
-    <div class="container  py-1 px-2 dem rounded">
+    <div class="container  py-2 px-2 dem rounded">
         
         <!-- Container holding Header button -->
         <div class="container-fluid width px-3 py-3 rounded" style="background-image: url('assets/what-the-hex.png');">
@@ -27,7 +27,7 @@
                 
                     <!-- The slider -->
                 <div class="row ">
-                    <div class="col-12-md mt-2 text-center mx-auto">
+                    <div class="col-md-12 mt-2 text-center mx-auto">
                         <p>Choose character length: 8 to 128</p>
                         <div class="slideContainer">
                             <input type="range" min="8" max="128" value="68" class="slider" id="slider">
@@ -37,53 +37,53 @@
                 </div>
                 <!-- Description of options -->
                 <div class="row">
-                    <div class="col-12-md col-4-sm text-center mx-auto">
+                    <div class="col-md-12 col-sm-4text-center mx-auto">
                         <p>Choose what type of characters will be in your password</p>
                     </div>
                 </div>
 
                 <!-- Option buttons -->
-                <div class="row">
-                    <div class="btn-group  text-center mx-auto" role="group" aria-label="">
-                        <div class="col-4-md col-12-sm text-center mx-auto">
+                    <div class="row btn-group text-center mx-auto" role="group" aria-label="">
+                        <div class="col-sm-3 col-12 text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onUpper">
                                 <span class="onOff Up round"></span>
                             </label>
                         </div>
-                        <div class="col-4-md col-12-sm text-center mx-auto">
+                        <div class="col-sm-3 col-12 text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onLower">
                                 <span class="onOff Low round"></span>
                             </label>
                         </div>
-                        <div class="col-4-md col-12-sm text-center mx-auto">
+                        <div class="col-sm-3 col-12 text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onNumber">
                                 <span class="onOff Num round"></span>
                             </label>
                         </div>
-                        <div class="col-4-md col-12-sm text-center mx-auto">
+                        <div class="col-sm-3 col-12 text-center mx-auto">
                             <label class="switch">
                                 <input type="checkbox" id="onSpecial">
                                 <span class="onOff Spe round"></span>
                             </label>
                         </div>
                     </div>
-                </div>
+            
 
                 <!-- Submit Button -->
                 <div class="row">
-                    <div class="col-12-md mb-2 text-center mx-auto">
+                    <div class="col-md-12 mb-2 text-center mx-auto">
                         <button onclick="generatePassword()" type="button" class="btn btn-primary">Submit</button>
                     </div>
                 </div>
 
                 <!-- Password form -->
                 <div class="row">
-                    <div class="container mb-2 pb-1 text-center" id="displayPassword">
+                    <div class="col-8 container mb-2  text-center" id="displayPassword">
                         <textarea rows="3" cols="80" type="text" id="passwordComplete"></textarea>
                     </div>
+                    <button id="clipBoard" class="col-4 mb-2 pb-1 text-center" onclick="copyClipboard()">Copy text</button>
                 </div>
             </div>
         </div>
