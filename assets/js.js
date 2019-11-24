@@ -64,7 +64,11 @@ function generatePassword() {
     //must return value if none are checked
     return;
   }
+
+  // var is set for password
   let password = ""
+
+  // letters from global character are selected at random
   for (var i = 0; i < length; i++) {
     password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length - 1)));
   }
@@ -81,5 +85,6 @@ function copyClipboard() {
 
   document.execCommand("copy");
 
+  // let's user know password was copied
   alert("Copied the text: " + copyText.value);
 }

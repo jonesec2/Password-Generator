@@ -20,7 +20,7 @@ The website will be designed in a minimist way, presenting only important inform
 Additionally the user will be able to copy to their clipboard the new password after they finish creating one.
 
 ## User_Prompts
-After the user has stated they would like to make a password, prompts should appear upon the screen and the user will answer the questions.
+After the user has stated they would like to make a password, buttons will appear upon the screen and the user will turn on or off the type of characters that they want.
 
 The answer to the questions will determine what kind of password is generated. 
 
@@ -28,6 +28,8 @@ The answer to the questions will determine what kind of password is generated.
 After the user has chosen all of their preferences for their password, we will store that information, and then using java script we will formulate a randomly generated password.
 
 This password will display on screen for the user to see.
+
+Additionally the user will have the option to copy the password to their clipboard.
 
 ## Credits
 As I continue this journey and collaborate with more colleagues, I will add their names and contact info to this list.
