@@ -10,22 +10,22 @@
 </head>
 
 <body style="background-image: url('assets/what-the-hex-dark.png');">
-    
+
     <!-- Container holding everything -->
     <div class="container  py-2 px-2 dem rounded">
-        
+
         <!-- Container holding Header button -->
         <div class="container-fluid width px-3 py-3 rounded" style="background-image: url('assets/what-the-hex.png');">
-            
+
             <!-- Header button that changes and shows hidden container -->
             <input type="button" id="buttonOne" value="Let's make a password"
                 class="btn mx-auto buttonOne2 btn-primary btn-block contentToggle"
                 onclick="changeButton(); this.blur();" style="background-color:transparent;">
-                
-                <!-- The hidden content container -->
-                <div class="container dropDownContent rounded">
-                
-                    <!-- The slider -->
+
+            <!-- The hidden content container -->
+            <div class="container dropDownContent rounded">
+
+                <!-- The slider -->
                 <div class="row ">
                     <div class="col-md-12 mt-2 text-center mx-auto">
                         <p>Choose character length: 8 to 128</p>
@@ -43,33 +43,33 @@
                 </div>
 
                 <!-- Option buttons -->
-                    <div class="row btn-group text-center mx-auto" role="group" aria-label="">
-                        <div class="col-sm-3 col-12 mt-2 text-center mx-auto">
-                            <label class="switch">
-                                <input type="checkbox" id="onUpper">
-                                <span class="onOff Up round"></span>
-                            </label>
-                        </div>
-                        <div class="col-sm-3 col-12 mt-2  text-center mx-auto">
-                            <label class="switch">
-                                <input type="checkbox" id="onLower">
-                                <span class="onOff Low round"></span>
-                            </label>
-                        </div>
-                        <div class="col-sm-3 col-12 mt-2  text-center mx-auto">
-                            <label class="switch">
-                                <input type="checkbox" id="onNumber">
-                                <span class="onOff Num round"></span>
-                            </label>
-                        </div>
-                        <div class="col-sm-3 col-12 mt-2 text-center mx-auto">
-                            <label class="switch">
-                                <input type="checkbox" id="onSpecial">
-                                <span class="onOff Spe round"></span>
-                            </label>
-                        </div>
+                <div class="row btn-group text-center mx-auto" role="group" aria-label="">
+                    <div class="col-sm-3 col-12 mt-2 text-center mx-auto">
+                        <label class="switch">
+                            <input type="checkbox" id="onUpper">
+                            <span class="onOff Up round"></span>
+                        </label>
                     </div>
-            
+                    <div class="col-sm-3 col-12 mt-2  text-center mx-auto">
+                        <label class="switch">
+                            <input type="checkbox" id="onLower">
+                            <span class="onOff Low round"></span>
+                        </label>
+                    </div>
+                    <div class="col-sm-3 col-12 mt-2  text-center mx-auto">
+                        <label class="switch">
+                            <input type="checkbox" id="onNumber">
+                            <span class="onOff Num round"></span>
+                        </label>
+                    </div>
+                    <div class="col-sm-3 col-12 mt-2 text-center mx-auto">
+                        <label class="switch">
+                            <input type="checkbox" id="onSpecial">
+                            <span class="onOff Spe round"></span>
+                        </label>
+                    </div>
+                </div>
+
 
                 <!-- Submit Button -->
                 <div class="row">
@@ -85,7 +85,8 @@
                     </div>
                 </div>
                 <div class="row">
-                    <button id="clipBoard" class="col-4 mb-2 pb-1 text-center mx-auto" onclick="copyClipboard()">Copy Password</button>
+                    <button id="clipBoard" class="col-4 mb-2 pb-1 text-center mx-auto" onclick="copyClipboard()">Copy
+                        Password</button>
                 </div>
             </div>
         </div>

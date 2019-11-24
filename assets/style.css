@@ -1,106 +1,126 @@
 .width {
-    max-width: 768px;
+  max-width: 768px;
     
 }
+
 body {
-    white-space: normal;
-    text-align: center;
+  white-space: normal;
+  text-align: center;
 }
 
 #buttonOne {
-    font-size: 35PX;
-    width: 100%;
-    border: 3px, black;
-    outline: 3px, BLACK;
-    text-shadow:  -1px 0 #000,
-    1px -1px 0 #000,
-    -1px 1px 0 #000,
-    1px 1px 0 #000;
-    overflow-wrap: normal;
+  font-size: 35PX;
+  width: 100%;
+  text-shadow:  -1px 0 #000,
+  1px -1px 0 #000,
+  -1px 1px 0 #000,
+  1px 1px 0 #000;
+  overflow-wrap: normal;
 }
 
-.btn:hover { outline: 0 !important }
+.btn:hover { 
+  border-color: transparent;
+  outline: 0 !important;
+}
+
+/* Tried making the on click border invisible */
+button:active {
+  border-color: transparent !important;
+}
+
+.btn-primary:not(:disabled):not(.disabled).active {
+  border-color: transparent !important;
+}
+
+.btn-primary {
+  border-color: transparent;
+}
 
 .btn:focus {
-    outline: none;
-  }
+  outline: 0 !important;
+  border-color: transparent;
+}
+/* this is where I stopped trying */
 
 .btn-block {
-    align-content: center;
-    padding-top: 25px;
-    padding-bottom: 25px;
-    max-width: 400px;
-    font-size: 25px;
-    font-weight: 500;
+  align-content: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  max-width: 400px;
+  font-size: 25px;
+  font-weight: 500;
 }
-#buttonOne {
-    color: white;
-}
-.container-fluid {
-    opacity: 1;
-    z-index: 50;
 
+#buttonOne {
+  color: white;
 }
+
+.container-fluid {
+  opacity: 1;
+  z-index: 50;
+}
+
 p {
-    color: white;
-    text-align: center;
+  color: white;
+  text-align: center;
 }
+
 .dem {
-    max-width:800px;
-    background-color: rgb(36, 36, 36);
-    z-index: 1;
-    margin-top: 10%;
+  max-width:800px;
+  background-color: rgb(36, 36, 36);
+  z-index: 1;
+  margin-top: 10%;
 }
 
 .dropDownContent {
-    padding: 0 18px;
-    overflow: hidden;
-    background-color: rgb(36, 36, 36);
-    max-height: 0;
-    transition: max-height 0.2s ease-out;
+  padding: 0 18px;
+  overflow: hidden;
+  background-color: rgb(36, 36, 36);
+  max-height: 0;
+  transition: max-height 0.2s ease-out;
 }
 
 .slideContainer {
-    width: 100%; 
-  }
+  width: 100%; 
+}
   
-  /* The slider  */
-  .slider {
-    -webkit-appearance: none;  
-    appearance: none;
-    width: 100%; 
-    border-radius: 5px;
-    height: 15px;
-    background: #d3d3d3; 
-    outline: none; 
-    opacity: 0.7; 
-    -webkit-transition: .2s; 
-    transition: opacity .2s;
-  }
+/* The slider  */
+.slider {
+  -webkit-appearance: none;  
+  appearance: none;
+  width: 100%; 
+  border-radius: 5px;
+  height: 15px;
+  background: #d3d3d3; 
+  outline: none; 
+  opacity: 0.7; 
+  -webkit-transition: .2s; 
+  transition: opacity .2s;
+}
   
-  /* Mouse-over effects */
-  .slider:hover {
-    opacity: 1; 
-  }
+/* Mouse-over effects */
+.slider:hover {
+  opacity: 1; 
+}
 
-  /* The slider handle */
-  .slider::-webkit-slider-thumb {
-    -webkit-appearance: none; 
-    appearance: none;
-    width: 22px; 
-    height: 22px; 
-    border-radius: 50%;
-    background: #2196F3; 
-    cursor: pointer; 
-  }
+/* The slider handle */
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; 
+  appearance: none;
+  width: 22px; 
+  height: 22px; 
+  border-radius: 50%;
+  background: #2196F3; 
+  cursor: pointer; 
+}
   
-  .slider::-moz-range-thumb {
-    width: 22px; 
-    height: 22px; 
-    border-radius: 50%;
-    background: #2196F3; 
-    cursor: pointer; 
-  }
+.slider::-moz-range-thumb {
+  width: 22px; 
+  height: 22px; 
+  border-radius: 50%;
+  background: #2196F3; 
+  cursor: pointer; 
+}
 
 p {
   overflow-wrap: break-word;
@@ -109,116 +129,115 @@ p {
 }
 
 @media (max-width: 450px) {
-    #buttonOne {font-size: 20px; overflow-wrap: normal;}
+  #buttonOne {font-size: 20px; overflow-wrap: normal;}
 
 }
 
 @media (max-width: 540px) {
-    #clipBoard {font-size: 10px;  overflow-wrap: break-word;}
+  #clipBoard {font-size: 10px;  overflow-wrap: break-word;}
 
 }
 
 @media (max-width: 400px) {
-    .btn-group {overflow: auto; width: 100%;}
+  .btn-group {overflow: auto; width: 100%;}
 }
 
 /* The switch box around the slider */
 .switch {
-    position: relative;
-    display: inline-block;
-    width: 80px;
-    height: 34px;
-    overflow-wrap: normal;
-  }
+  position: relative;
+  display: inline-block;
+  width: 80px;
+  height: 34px;
+  overflow-wrap: normal;
+}
   
-  .switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-    overflow-wrap: normal;
-  }
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  overflow-wrap: normal;
+}
   
-  /* The slider */
-  .onOff {
-    position: absolute;
-    cursor: pointer;
-    top: 0;
-    left: 5px;
-    right: 5px;
-    bottom: 10px;
-    background-color: #ccc;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 34px;
-  }
+/* The slider */
+.onOff {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 5px;
+  right: 5px;
+  bottom: 10px;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 34px;
+}
   
-  .Up:before {
-    position: absolute;
-    content: "ABC";
-    height: 28px;
-    width: 32px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-  }
+.Up:before {
+  position: absolute;
+  content: "ABC";
+  height: 28px;
+  width: 32px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
 
   .Low:before {
-    position: absolute;
-    content: "abc";
-    height: 28px;
-    width: 32px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-  }
+  position: absolute;
+  content: "abc";
+  height: 28px;
+  width: 32px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
   
-  .Num:before {
-    position: absolute;
-    content: "123";
-    height: 28px;
-    width: 32px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-  }
+.Num:before {
+  position: absolute;
+  content: "123";
+  height: 28px;
+  width: 32px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
   
-  .Spe:before {
-    position: absolute;
-    content: "!*$";
-    height: 28px;
-    width: 32px;
-    left: 4px;
-    bottom: 2px;
-    background-color: white;
-    -webkit-transition: .4s;
-    transition: .4s;
-    border-radius: 50%;
-  }
+.Spe:before {
+  position: absolute;
+  content: "!*$";
+  height: 28px;
+  width: 32px;
+  left: 4px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 50%;
+}
+    
+input:checked + .onOff {
+  background-color: #2196F3;
+}
   
+input:focus + .onOff {
+  box-shadow: 0 0 1px #2196F3;
+}
   
-  input:checked + .onOff {
-    background-color: #2196F3;
-  }
-  
-  input:focus + .onOff {
-    box-shadow: 0 0 1px #2196F3;
-  }
-  
-  input:checked + .onOff:before {
-    -webkit-transform: translateX(30px);
-    -ms-transform: translateX(30px);
-    transform: translateX(30px);
-  }
+input:checked + .onOff:before {
+  -webkit-transform: translateX(30px);
+  -ms-transform: translateX(30px);
+  transform: translateX(30px);
+}
 
 #passwordComplete {
-      width: 100%;
-  }
+    width: 100%;
+}
