@@ -70,7 +70,7 @@ function generatePassword() {
 
   // letters from global character are selected at random
   for (var i = 0; i < length; i++) {
-    password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length - 1)));
+    password = password + characters.charAt(Math.floor(Math.random() * Math.floor(characters.length)));
   }
   // add password to page
   document.getElementById("passwordComplete").value = password;
